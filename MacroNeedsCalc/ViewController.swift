@@ -68,6 +68,18 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     return 4
   }
   
+  func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    if component == 0 {
+      return self.heigthFeet.count
+    } else if component == 1 {
+      return self.feet.count
+    } else if component == 2{
+      return self.heightInches.count
+    } else {
+      return self.inches.count
+    }
+  }
+  
   func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView {
     
     let heightFeetPickerLabel = UILabel()
@@ -90,39 +102,31 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     inchesPickerLabel.attributedText = inchesTitle
     
     if component == 0 {
+      pickerView.numberOfRowsInComponent(self.heigthFeet.count)
       return heightFeetPickerLabel
     } else if component == 1 {
+      pickerView.numberOfRowsInComponent(self.feet.count)
       return feetPickerLabel
     } else if component == 2 {
+      pickerView.numberOfRowsInComponent(self.heightInches.count)
       return heightInchespickerLabel
     } else {
+      pickerView.numberOfRowsInComponent(self.inches.count)
       return inchesPickerLabel
     }
   }
   
-  func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-    if component == 0 {
-      return self.heigthFeet.count
-    } else if component == 1 {
-      return self.feet.count
-    } else if component == 2{
-      return self.heightInches.count
-    } else {
-      return self.inches.count
-    }
-  }
-  
-  func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-    if component == 0 {
-      return self.heigthFeet[row]
-    } else if component == 1 {
-      return self.feet[row]
-    } else if component == 2{
-      return self.heightInches[row]
-    } else {
-      return self.inches[row]
-    }
-  }
+//  func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+//    if component == 0 {
+//      return self.heigthFeet[row]
+//    } else if component == 1 {
+//      return self.feet[row]
+//    } else if component == 2{
+//      return self.heightInches[row]
+//    } else {
+//      return self.inches[row]
+//    }
+//  }
   
   func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
     return 36.0
