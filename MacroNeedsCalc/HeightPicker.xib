@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="MacroNeedsCalc" customModuleProvider="target">
+            <connections>
+                <outlet property="heightPicker" destination="vcs-rp-DS0" id="wUh-8L-qi3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcs-rp-DS0">
+                    <rect key="frame" x="140" y="219" width="320" height="162"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="KEr-h2-bbq"/>
+                        <outlet property="delegate" destination="-1" id="ize-hk-Wu8"/>
+                    </connections>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQH-9F-vgx">
+                    <rect key="frame" x="275.5" y="406" width="49" height="40"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                    <state key="normal" title="Done">
+                        <color key="titleColor" red="0.72805003800000001" green="1" blue="0.87228853900000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="vcs-rp-DS0" secondAttribute="centerX" id="GQI-ri-dFx"/>
+                <constraint firstItem="nQH-9F-vgx" firstAttribute="top" secondItem="vcs-rp-DS0" secondAttribute="bottom" constant="25" id="R6j-iK-QcI"/>
+                <constraint firstAttribute="centerX" secondItem="nQH-9F-vgx" secondAttribute="centerX" id="rfI-Bg-a9u"/>
+                <constraint firstAttribute="centerY" secondItem="vcs-rp-DS0" secondAttribute="centerY" id="umT-wJ-OM4"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
